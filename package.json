@@ -1,0 +1,25 @@
+{
+  "name": "greetings-webapp",
+  "version": "1.0.0",
+  "description": "This web-app is to greet individual, all you need to do is to enter your name and push enter it will return a greeting massage",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "greetings-webapp"
+  },
+  "author": "Rendani Lukhwa",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.2",
+    "express3-handlebars": "^0.5.2",
+    "mocha": "^3.4.1",
+    "mongoose": "^4.9.9",
+    "nodemon": "^1.11.0"
+  }
+}
