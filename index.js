@@ -14,7 +14,7 @@ const greetingRoutes = GreetingsRoutes();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 //creating a route
-app.get('/greetings/:name',greetingRoutes.index);
+app.get('/',greetingRoutes.index);
 app.get('/greeted',greetingRoutes.greeted);
 app.get('/counter/:name', greetingRoutes.counter);
 
