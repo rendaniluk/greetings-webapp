@@ -6,7 +6,7 @@ module.exports = function() { //module exports function
 
       var name = req.body.name;
 
-        if (!name) {
+        if (!name) {//condition to make sure the substr is difined 
             var name = req.body.name;
         } else {
             var name = (req.body.name).substr(0, 1).toUpperCase() + '' + (req.body.name).substr(1).toLowerCase(); //parameter
