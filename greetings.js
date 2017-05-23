@@ -2,10 +2,15 @@ module.exports = function() { //module exports function
     const greetedNames = []; //empty array for unique greeted names
 
     const greetedNamesCounts = {}; //empty to store counts of all greeted names object
-
     const index = function(req, res) { //index function for greetings route
-        const name = req.params.name; //parameter
 
+      var name = req.body.name;
+
+        if (!name) {
+            var name = req.body.name;
+        } else {
+            var name = (req.body.name).substr(0, 1).toUpperCase() + '' + (req.body.name).substr(1).toLowerCase(); //parameter
+        }
 
         var foundGreeting = greetedNames.find(function(currentGreeting) { //finding if the name already exists
             return currentGreeting === name;
@@ -20,9 +25,17 @@ module.exports = function() { //module exports function
 
         greetedNamesCounts[name]++;
         const currentGreetingCounter = greetedNamesCounts[name];
-
-        res.render('greetings/index')
+        if (!name) {
+            res.render('greetings/index', {
+                GreetMe: name
+            })
+        } else {
+            res.render('greetings/index', {
+                GreetMe: "Hello, " + name
+            })
+        }
     }
+
     const greeted = function(req, res) { //function for greeted route
         res.render('greetings/greeted', {
             Greeted: greetedNames
@@ -31,7 +44,11 @@ module.exports = function() { //module exports function
     const counter = function(req, res) { //function for couter route
         const name = req.params.name;
         const currentGreetingCounter = greetedNamesCounts[name];
-        res.send('Hello, ' + name + ' has been greeted ' + currentGreetingCounter + ' times')
+        const greetingCounterMsg = 'Hello, ' + name + ' has been greeted ' +
+            currentGreetingCounter + ' times'
+        res.render('greetings/counter', {
+            counterMsg: greetingCounterMsg
+        })
     }
 
     return { //returning object literal
