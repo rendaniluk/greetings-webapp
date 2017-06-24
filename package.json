@@ -4,7 +4,9 @@
   "description": "This web-app is to greet individual, all you need to do is to enter your name and push enter it will return a greeting massage",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node greetings.js"
+  },
+  "scripts": {
     "test": "test"
   },
   "repository": {
@@ -22,5 +24,7 @@
     "mocha": "^3.4.1",
     "mongoose": "^4.9.9",
     "nodemon": "^1.11.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }
