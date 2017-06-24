@@ -6,7 +6,7 @@ const app = express();
 
 const bodyParser = require('body-parser');
 
-const port = 3400;
+const port = 5000;
 
 const GreetingsRoutes = require('./greetings');
 
