@@ -6,12 +6,14 @@ const app = express();
 
 const bodyParser = require('body-parser');
 
-const port = 5000;
+// const port = 5000;
 
 const GreetingsRoutes = require('./greetings');
 
 const greetingRoutes = GreetingsRoutes();
 
+
+app.set('port', (process.env.PORT || 5000));
 //configuring handlebars
 app.engine('handlebars', exphbs({
   defaultLayout: 'main'
@@ -38,8 +40,12 @@ app.post('/counter/:name', greetingRoutes.counter);
 
 
 //starting a sever
-var localhost = app.listen(port, function() {
-  var host = localhost.address().address;
-  console.log('The greetings aplication running at http://%s:%s', host,
-    port);
+// var localhost = app.listen(port, function() {
+//   var host = localhost.address().address;
+//   console.log('The greetings aplication running at http://%s:%s', host,
+//     port);
+// });
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
