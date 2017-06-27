@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 
 //creating a route
-app.get('/greetings', greetingRoutes.index);
+app.get('/', greetingRoutes.index);
 app.post('/greetings', greetingRoutes.index);
 
 app.get('/greeted', greetingRoutes.greeted);
