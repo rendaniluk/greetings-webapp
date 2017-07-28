@@ -1,15 +1,21 @@
 <br><br>
     <form class="form" action="/greetings" method="post">
-      <!-- <label for="Tshivenda">Tshivenda: <input type="radio" name="name" value="Ndaa/Aa"></label>
-      <label for="English">English:<input type="radio" name="name" value="Hello"></label>
-      <label for="Shona">Shona:<input type="radio" name="name" value="Zvirisei"></label><br><br> -->
       <input type="text" name = "name" placeholder="Type name here"><br><br>
+      <label for="Tshivenda">Tshivenda: <input type="radio" name="radioBtn" value="Ndaa/Aa, "></label>
+      <label for="English">English:<input type="radio" name="radioBtn" value="Hello, "></label>
+      <label for="Shona">Shona:<input type="radio" name="radioBtn" value="Zvirisei, "></label><br><br>
       <input class = "btngreet" type="submit" value="Greet">
     </form><br><br>
+
+{{messages.error}}
+
+
 <div class="grr">
-
   {{GreetMe}}
+</div>
 
+<div class="counter">
+  {{numberOfgreetings}}
 </div>
 
 <br><br>

@@ -5,12 +5,12 @@ module.exports = function() { //module exports function
   const index = function(req, res) { //index function for greetings route
 
     var name = req.body.name;
-
+    var radioBtn = req.body.radioBtn;
     if (!name) { //condition to make sure the substr is difined
-      var name = req.body.name;
+      name = req.body.name;
     } else {
-      var name = (req.body.name).substr(0, 1).toUpperCase() + '' + (req.body
-        .name).substr(1).toLowerCase(); //parameter
+      name = (req.body.name).substr(0, 1).toUpperCase() + '' + (req.body.name)
+        .substr(1).toLowerCase(); //parameter
     }
 
     var foundGreeting = greetedNames.find(function(currentGreeting) { //finding if the name already exists
@@ -25,14 +25,17 @@ module.exports = function() { //module exports function
     }
 
     greetedNamesCounts[name]++;
-    const currentGreetingCounter = greetedNamesCounts[name];
-    if (!name) {
+    //counting people greeted
+    var numberOfgreetings = greetedNames.length
+      // const currentGreetingCounter = greetedNamesCounts[name];
+    if (!name || !radioBtn) {
       res.render('pages/index', {
-        GreetMe: name
+        GreetMe: "Input fields required"
       })
     } else {
-      res.render('pages/index', {
-        GreetMe: "Hello, " + name
+      res.render('pages/index', { //render greetings massage and count
+        GreetMe: radioBtn + name,
+        numberOfgreetings: numberOfgreetings
       })
     }
   }
@@ -52,10 +55,19 @@ module.exports = function() { //module exports function
     })
   }
 
+  const greetingsCount = function(req, res) {
+    // const numberOfpeople = ;
+    var numberOfgreetings = greetedNames.length
+    res.render('pages/index', {
+      numberOfgreetings: numberOfgreetings
+    })
+  }
+
   return { //returning object literal
     index,
     greeted,
-    counter
+    counter,
+    greetingsCount
   }
 
 }

@@ -11,6 +11,24 @@ html{
     align-items: center;
     }
 
+li{
+list-style: none;
+}
+
+a:link, a:visited {
+    background-color: green;
+    color: white;
+    padding:0.5em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+  }
+
+
+a:hover, a:active {
+    background-color: blue;
+}
 
 h1{
   background-color:;
@@ -193,7 +211,7 @@ background-color: #70cc14;
     justify-content: center;
 }
 
-#counter{
+.counter{
     font-family: sans-serif;
     font-weight: bold;
     font-size: 20px;
