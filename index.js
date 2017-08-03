@@ -48,7 +48,7 @@ app.use(session({
 
 //creating a route
 app.get('/', greetingRoutes.index);
-app.post('/greetings', greetingRoutes.index);
+app.post('/', greetingRoutes.index);
 
 app.get('/greeted', greetingRoutes.greeted);
 app.get('/counter/:name', greetingRoutes.counter);
