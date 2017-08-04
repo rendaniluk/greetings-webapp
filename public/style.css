@@ -70,6 +70,16 @@ h1{
   font-family:cursive;
 }
 
+.error{
+  background-color: red;
+  text-align:center;
+  color:white;
+  font-size:large;
+  justify-content: center;
+  /*border-radius: 7px;*/
+  font-family:cursive;
+}
+
 .radioBtn{
   color:blue;
   -webkit-display: flex;

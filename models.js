@@ -6,6 +6,10 @@ module.exports = function(mongoUrl) {
     name: String
   });
 
+  const rendani = mongoose.model('rendani',{
+    
+  })
+
   return {
     greeted
   };
