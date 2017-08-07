@@ -3,7 +3,7 @@ module.exports = function() {
 
   //empty array for unique greeted names
   const greetedNames = [];
-
+console.log(greetedNames);
   //empty to store counts of all greeted names object
   const greetedNamesCounts = {};
 

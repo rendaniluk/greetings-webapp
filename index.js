@@ -10,6 +10,12 @@ const flash = require('express-flash');
 
 const session = require('express-session');
 
+// const Models = require('./models');
+//
+// const models = Models('mongodb://localhost/greetedList');
+
+
+
 // const port = 3400;
 
 app.set('port', (process.env.PORT || 5000));
@@ -18,7 +24,7 @@ const GreetingsRoutes = require('./greetings');
 
 const greetingRoutes = GreetingsRoutes();
 
-
+// models
 //configuring handlebars
 app.engine('handlebars', exphbs({
   defaultLayout: 'main'
