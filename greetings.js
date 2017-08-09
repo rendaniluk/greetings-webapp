@@ -1,73 +1,99 @@
-module.exports = function() { //module exports function
-  const greetedNames = []; //empty array for unique greeted names
+/////////////////module exports function/////////////////////////////
+module.exports = function() {
 
-  const greetedNamesCounts = {}; //empty to store counts of all greeted names object
-  const index = function(req, res) { //index function for greetings route
+    //empty array for unique greeted names
+    const greetedNames = [];
+    //empty to store counts of all greeted names object
+    const greetedNamesCounts = {};
 
-    var name = req.body.name;
-    var radioBtn = req.body.radioBtn;
-    if (!name) { //condition to make sure the substr is difined
-      name = req.body.name;
-    } else {
-      name = (req.body.name).substr(0, 1).toUpperCase() + '' + (req.body.name)
-        .substr(1).toLowerCase(); //parameter
+    /////////////////////////////////index function to render form///////////
+    const index = function(req, res) {
+        var numberOfgreetings = greetedNames.length;
+        res.render('pages/index', {
+          numberOfgreetings: numberOfgreetings
+        })
+      }
+      //////////////////////////////////////oOo////////////////////////////////
+
+
+    //////generateGreetings function to generate greetings and render it/////
+    const generateGreetings = function(req, res) {
+
+        var name = req.body.name;
+        var radioBtn = req.body.radioBtn;
+
+        //condition to make sure the substr is difined
+        if (!name) {
+          name = req.body.name;
+        } else {
+          name = (req.body.name).substr(0, 1).toUpperCase() + '' + (req.body.name)
+            .substr(1).toLowerCase();
+        }
+
+
+        //finding if the name already exists
+        var foundGreeting = greetedNames.find(function(currentGreeting) {
+          return currentGreeting === name;
+        })
+
+        //marking sure that the added names does'nt repeat
+        if (name && !foundGreeting) {
+          //pushing the name that does'nt exists in greetedNames
+          greetedNames.push(name)
+        }
+
+        //mapping the names with the number it was greeted
+        if (greetedNamesCounts[name] === undefined) {
+          greetedNamesCounts[name] = 0;
+        }
+        //counting
+        greetedNamesCounts[name]++;
+
+        //getting the length of an array
+        var numberOfgreetings = greetedNames.length;
+
+        //checking if the text field has a name and radio button is selected
+        if (!name || !radioBtn) {
+          req.flash('error', 'Please enter name and select radio button!')
+          res.redirect('/')
+        } else {
+          //render greetings massage and count
+          res.render('pages/index', {
+            GreetMe: radioBtn + name,
+            numberOfgreetings: numberOfgreetings
+          })
+        }
+      }
+      ////////////////////////////////////////oOo/////////////////////////
+
+    //////greeted function to render the list of greeted people//////
+    const greeted = function(req, res) {
+        res.render('pages/greeted', {
+          Greeted: greetedNames
+        })
+      }
+      //////////////////////////////////oOo////////////////////////////
+
+    ////counter function to render how many times the person was greeted///////
+    const counter = function(req, res) {
+        const name = req.params.name;
+        const currentGreetingCounter = greetedNamesCounts[name];
+        const greetingCounterMsg = 'Hello, ' + name + ' has been greeted ' +
+          currentGreetingCounter + ' times'
+        res.render('pages/counter', {
+          counterMsg: greetingCounterMsg
+        })
+      }
+      ///////////////////////////////oOo///////////////////////////////////////
+
+    ///////////////return all function as object lateral////////////////////////
+    return {
+      index,
+      generateGreetings,
+      greeted,
+      counter
     }
+    /////////////////////////////////////oOo/////////////////////////////////////
 
-    var foundGreeting = greetedNames.find(function(currentGreeting) { //finding if the name already exists
-      return currentGreeting === name;
-    })
-    if (name && !foundGreeting) { //marking sure that the added names does'nt repeat
-      greetedNames.push(name) //pushing the name that does'nt exists in greetedNames
-    }
-
-    if (greetedNamesCounts[name] === undefined) { //mapping the names with the number it was greeted
-      greetedNamesCounts[name] = 0;
-    }
-
-    greetedNamesCounts[name]++;
-    //counting people greeted
-    var numberOfgreetings = greetedNames.length
-      // const currentGreetingCounter = greetedNamesCounts[name];
-    if (!name || !radioBtn) {
-      res.render('pages/index', {
-        GreetMe: "Input fields required"
-      })
-    } else {
-      res.render('pages/index', { //render greetings massage and count
-        GreetMe: radioBtn + name,
-        numberOfgreetings: numberOfgreetings
-      })
-    }
   }
-
-  const greeted = function(req, res) { //function for greeted route
-    res.render('pages/greeted', {
-      Greeted: greetedNames
-    })
-  }
-  const counter = function(req, res) { //function for couter route
-    const name = req.params.name;
-    const currentGreetingCounter = greetedNamesCounts[name];
-    const greetingCounterMsg = 'Hello, ' + name + ' has been greeted ' +
-      currentGreetingCounter + ' times'
-    res.render('pages/counter', {
-      counterMsg: greetingCounterMsg
-    })
-  }
-
-  const greetingsCount = function(req, res) {
-    // const numberOfpeople = ;
-    var numberOfgreetings = greetedNames.length
-    res.render('pages/index', {
-      numberOfgreetings: numberOfgreetings
-    })
-  }
-
-  return { //returning object literal
-    index,
-    greeted,
-    counter,
-    greetingsCount
-  }
-
-}
+  ///////////////////////////////////////oOo////////////////////////////////////

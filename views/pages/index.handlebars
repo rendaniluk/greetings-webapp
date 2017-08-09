@@ -1,16 +1,21 @@
 <br><br>
-    <form class="form" action="/greetings" method="post">
-      <input type="text" name = "name" placeholder="Type name here"><br><br>
-      <label for="Tshivenda">Tshivenda: <input type="radio" name="radioBtn" value="Ndaa/Aa, "></label>
-      <label for="English">English:<input type="radio" name="radioBtn" value="Hello, "></label>
-      <label for="Shona">Shona:<input type="radio" name="radioBtn" value="Zvirisei, "></label><br><br>
-      <input class = "btngreet" type="submit" value="Greet">
-    </form><br><br>
+<form class="form" action="/" method="post">
+  <div class="name">
+  </div>
+  <div class="radioBtn">
+    <input class="form-control" type="text" name="name" placeholder="Type name here"><br><br>
+    <label for="Tshivenda"><input type="radio" name="radioBtn" value="Ndaa/Aa, "> Tshivenda</label>
+    <label for="English"><input type="radio" name="radioBtn" value="Hello, "> English</label>
+    <label for="Shona"><input type="radio" name="radioBtn" value="Zvirisei, "> Shona</label><br><br>
+    <input class="btn btn-success" type="submit" value="Greet">
+  </div>
 
-{{messages.error}}
-
+</form><br><br>
 
 <div class="grr">
+  <div class="error">
+    {{messages.error}}
+  </div>
   {{GreetMe}}
 </div>
 
@@ -19,4 +24,4 @@
 </div>
 
 <br><br>
-<a href="/greeted">Checkout greeted names</a>
+<a class="myLinks" href="/greeted">Checkout greeted names</a>

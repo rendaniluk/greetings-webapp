@@ -1,8 +1,10 @@
-
-<ul>
-    {{#each Greeted}}
-    <a href="/counter/{{this}}"><li>{{this}}</li></a>
-    {{/each}}
-    <br><br>
-    <a href="/">Greet more people</a>
+<br><br>
+<ul class="list-group">
+  {{#each Greeted}}
+    <a href="/counter/{{this}}">
+      <li class="myClass"> <input type="button" class="btn btn-info" value="{{this}}"></input></li><br>
+    </a>
+  {{/each}}
+  <br><br>
 </ul>
+ <a class="myLinks" href="/">Greet more people</a>

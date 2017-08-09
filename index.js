@@ -1,4 +1,7 @@
+// const bootstrap = require('bootstrap');
+
 const express = require('express');
+
 
 const exphbs = require('express3-handlebars');
 
@@ -10,11 +13,21 @@ const flash = require('express-flash');
 
 const session = require('express-session');
 
+// const Models = require('./models');
+//
+// const models = Models('mongodb://localhost/greetedList');
+
+
+
+// const port = 3400;
+
 app.set('port', (process.env.PORT || 5000));
 
 const GreetingsRoutes = require('./greetings');
 
 const greetingRoutes = GreetingsRoutes();
+
+// models
 
 //configuring handlebars
 app.engine('handlebars', exphbs({
@@ -45,22 +58,12 @@ app.use(flash());
 
 //creating a route
 app.get('/', greetingRoutes.index);
-app.post('/greetings', greetingRoutes.index);
+app.post('/', greetingRoutes.generateGreetings);
 
 app.get('/greeted', greetingRoutes.greeted);
 app.get('/counter/:name', greetingRoutes.counter);
-app.post('/counter/:name', greetingRoutes.counter);
 
-// app.get('/greetings', greetingRoutes.greetedNamesLength);
-// app.post('/greetings', greetingRoutes.greetedNamesLength);
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
-
-
-//starting a sever
-// var localhost = app.listen(port, function() {
-//   var host = localhost.address().address;
-//   console.log('The greetings aplication running at http://%s:%s', host,
-//     port);
-// });
