@@ -6,18 +6,15 @@ const app = express();
 
 const bodyParser = require('body-parser');
 
-// const flash = require('express-flash');
+const flash = require('express-flash');
 
 const session = require('express-session');
-
-// const port = 3400;
 
 app.set('port', (process.env.PORT || 5000));
 
 const GreetingsRoutes = require('./greetings');
 
 const greetingRoutes = GreetingsRoutes();
-
 
 //configuring handlebars
 app.engine('handlebars', exphbs({
@@ -44,7 +41,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-// app.use(flash());
+app.use(flash());
 
 //creating a route
 app.get('/', greetingRoutes.index);
