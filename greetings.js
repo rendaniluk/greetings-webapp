@@ -69,9 +69,14 @@ console.log(greetedNames);
 
   //////greeted function to render the list of greeted people//////
   const greeted = function(req, res) {
-    res.render('pages/greeted', {
-      Greeted: greetedNames
-    })
+    if(greetedNames.length==0){
+      req.flash('error','No greeted people yet, put name, choose language and click greet')
+      res.redirect('/')
+    }else {
+      res.render('pages/greeted', {
+        Greeted: greetedNames
+      })
+    }
   }
   //////////////////////////////////oOo////////////////////////////
 
