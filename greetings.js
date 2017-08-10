@@ -6,17 +6,17 @@ module.exports = function() {
     //empty to store counts of all greeted names object
     const greetedNamesCounts = {};
 
-    /////////////////////////////////index function to render form///////////
+/////////////////////////////////index function to render form///////////
     const index = function(req, res) {
         var numberOfgreetings = greetedNames.length;
         res.render('pages/index', {
           numberOfgreetings: numberOfgreetings
         })
       }
-      //////////////////////////////////////oOo////////////////////////////////
+//////////////////////////////////////oOo////////////////////////////////
 
 
-    //////generateGreetings function to generate greetings and render it/////
+/////generateGreetings function to generate greetings and render it/////
     const generateGreetings = function(req, res) {
 
         var name = req.body.name;
@@ -64,17 +64,22 @@ module.exports = function() {
           })
         }
       }
-      ////////////////////////////////////////oOo/////////////////////////
+////////////////////////////////////////oOo/////////////////////////
 
-    //////greeted function to render the list of greeted people//////
-    const greeted = function(req, res) {
-        res.render('pages/greeted', {
-          Greeted: greetedNames
-        })
+//////greeted function to render the list of greeted people//////
+      const greeted = function(req, res) {
+        if(greetedNames.length==0){
+          req.flash('error','No greeted people yet, put name, choose language and click greet')
+          res.redirect('/')
+        }else {
+          res.render('pages/greeted', {
+            Greeted: greetedNames
+          })
+        }
       }
-      //////////////////////////////////oOo////////////////////////////
+//////////////////////////////////oOo////////////////////////////
 
-    ////counter function to render how many times the person was greeted///////
+////counter function to render how many times the person was greeted///////
     const counter = function(req, res) {
         const name = req.params.name;
         const currentGreetingCounter = greetedNamesCounts[name];
@@ -84,41 +89,15 @@ module.exports = function() {
           counterMsg: greetingCounterMsg
         })
       }
-      ///////////////////////////////oOo///////////////////////////////////////
+///////////////////////////////oOo///////////////////////////////////////
 
-    ///////////////return all function as object lateral////////////////////////
+///////////////return all function as object lateral////////////////////////
     return {
       index,
       generateGreetings,
       greeted,
       counter
     }
-    /////////////////////////////////////oOo/////////////////////////////////////
-
-<<<<<<< HEAD
-  //////greeted function to render the list of greeted people//////
-  const greeted = function(req, res) {
-    if(greetedNames.length==0){
-      req.flash('error','No greeted people yet, put name, choose language and click greet')
-      res.redirect('/')
-    }else {
-      res.render('pages/greeted', {
-        Greeted: greetedNames
-      })
-    }
-  }
-  //////////////////////////////////oOo////////////////////////////
-
-  ////counter function to render how many times the person was greeted///////
-  const counter = function(req, res) {
-    const name = req.params.name;
-    const currentGreetingCounter = greetedNamesCounts[name];
-    const greetingCounterMsg = 'Hello, ' + name + ' has been greeted ' +
-      currentGreetingCounter + ' times'
-    res.render('pages/counter', {
-      counterMsg: greetingCounterMsg
-    })
-=======
->>>>>>> refs/remotes/origin/master
-  }
-  ///////////////////////////////////////oOo////////////////////////////////////
+/////////////////////////////////////oOo/////////////////////////////////////
+}
+////////////////////////////////oOo////////////////////////////////////////
