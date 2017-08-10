@@ -2,8 +2,8 @@
 This app allows you to greet people in language of your preferences and also count how many times the person was greeted.
 
 ## All you need run  this app is to:
-* Enter name you wish to greet in the text already.
-* Select language you want to use.
+* Enter name you wish to greet in the text area
+* Select language you want to use
 * Click greet button then it will display greeting massage and the name greeted 
 ## If you click greet button without following above instructions it will:
 * Display error massage.
