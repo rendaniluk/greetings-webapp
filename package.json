@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "bootstrap": "^4.0.0-alpha.6",
     "express": "^4.15.2",
     "express-flash": "git://github.com/RGBboy/express-flash.git",
     "express-handlebars": "^3.0.0",

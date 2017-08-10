@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 <div class="error">
     {{messages.error}}
 </div>
 <ul>
+=======
+<br><br>
+<ul class="list-group">
+>>>>>>> refs/remotes/origin/master
   {{#each Greeted}}
     <a href="/counter/{{this}}">
-      <li>{{this}}</li>
+      <li class="myClass"> <input type="button" class="btn btn-info" value="{{this}}"></input></li><br>
     </a>
   {{/each}}
   <br><br>
-  <a href="/">Greet more people</a>
 </ul>
+ <a class="myLinks" href="/">Greet more people</a>

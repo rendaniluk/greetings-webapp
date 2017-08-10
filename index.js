@@ -1,4 +1,7 @@
+// const bootstrap = require('bootstrap');
+
 const express = require('express');
+
 
 const exphbs = require('express3-handlebars');
 
@@ -25,6 +28,7 @@ const GreetingsRoutes = require('./greetings');
 const greetingRoutes = GreetingsRoutes();
 
 // models
+
 //configuring handlebars
 app.engine('handlebars', exphbs({
   defaultLayout: 'main'
@@ -36,9 +40,9 @@ app.use(express.static('public'));
 
 //using bodyParser
 app.use(bodyParser.urlencoded({
-  extended: false
-}))
-// parse application/json
+    extended: false
+  }))
+  // parse application/json
 app.use(bodyParser.json());
 
 //configuring session
