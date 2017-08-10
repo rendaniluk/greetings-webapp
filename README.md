@@ -19,4 +19,4 @@ This app allows you to greet people in language of your preferences and also cou
 
 # Enjoy this app at:
 
-[greetings app](rendani-greetings.herokuapp.com)
+[greetings app](http://rendani-greetings.herokuapp.com)
