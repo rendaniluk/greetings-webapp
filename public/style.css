@@ -70,17 +70,29 @@ h1{
   align-items: center;
   justify-content: center;
  }
-
+.col-6{
+  margin-left: 126px;
+}
 .form-control{
-  width: 40%;
+  -webkit-display: flex;
+-moz-display: flex;
+display: flex;
+align-items: center;
+justify-content: center;
+  /*width: 40%;
 align: justify;
-margin-left:30%;
+margin-left:30%;*/
 }
 
 #radBtn{
-  align: justify;
+  -webkit-display: flex;
+-moz-display: flex;
+display: flex;
+align-items: center;
+justify-content: center;
+  /*align: justify;
   width: 80%;
-  margin-left:25%;
+  margin-left:25%;*/
 }
 
 #btnGreet{
