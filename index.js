@@ -13,19 +13,22 @@ const flash = require('express-flash');
 
 const session = require('express-session');
 
-// const Models = require('./models');
-//
-// const models = Models('mongodb://localhost/greetedList');
+const GreetingsRoutes = require('./greetings');
+
+const mongoURL = process.env.MONGO_DB_URL || 'mongodb://localhost/greet-app-mlabD';
 
 
+const Models = require('./models');
+
+const models = Models(mongoURL);
+
+const greetingRoutes = GreetingsRoutes(models);
 
 // const port = 3400;
 
 app.set('port', (process.env.PORT || 5000));
 
-const GreetingsRoutes = require('./greetings');
 
-const greetingRoutes = GreetingsRoutes();
 
 // models
 

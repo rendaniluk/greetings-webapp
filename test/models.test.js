@@ -2,7 +2,7 @@ const assert = require('assert');
 const Models = require('../models');
 describe('models should be able to', function() {
 
-  var models = Models("mongodb://localhost/greeted-test");
+  var models = Models("'mongodb://localhost/greet-app-mlabDB'");
 
   beforeEach(function(done) {
     models.greeted.remove({}, function(err) {
@@ -18,6 +18,8 @@ describe('models should be able to', function() {
     models.greeted
       .create(greetedNamesData, function(err) {
         done(err);
+
+
         models.greeted.find({
           name: 'greetedList'
         }, function(err, greeteds) {
@@ -25,9 +27,23 @@ describe('models should be able to', function() {
           done(err)
         })
       });
-
-
   });
 
+  it('should prevent duplicate Names', function(done) {
+    var greetedNamesData = {
+      name: 'greetedList'
+    };
+    models.greeted
+      .create(greetedNamesData, function(err) {
+        var greetedNamesData = {
+          name: 'greetedList'
+        };
+        models.greeted
+          .create(greetedNamesData, function(err) {
+            assert.ok(err, 'Should give error for duplicates')
+            done();
+          });
+      });
+  });
 
 })
