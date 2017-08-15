@@ -90,6 +90,13 @@ const models = Models('mongodb://localhost/greet-app-mlabDB');
 
 const greetingRoutes = GreetingsRoutes(models);
 
+
+const mongoURL = process.env.MONGO_DB_URL || "'mongodb://localhost/test'";
+
+mongoose.connect(mongoURL);
+
+
+
 // const port = 3400;
 
 app.set('port', (process.env.PORT || 5000));
