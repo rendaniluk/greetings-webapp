@@ -224,7 +224,7 @@ module.exports = function(models) {
     const counter = function(req, res) {
         const name = req.params.name;
         const currentGreetingCounter = greetedNamesCounts[name];
-        console.log(name);
+        // console.log(name);
         const greetingCounterMsg = 'Hello, ' + name + ' has been greeted ' +
           currentGreetingCounter + ' times'
         res.render('pages/counter', {

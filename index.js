@@ -84,7 +84,7 @@ const session = require('express-session');
 
 const GreetingsRoutes = require('./greetings');
 
-const mongoURL = process.env.MONGO_DB_URL || 'mongodb://localhost/greet-app-mlabD';
+const mongoURL = process.env.MONGO_DB_URL || 'mongodb://localhost/greet-app-mlabDB';
 
 
 const Models = require('./models');
@@ -95,7 +95,6 @@ const greetingRoutes = GreetingsRoutes(models);
 
 // const port = 3400;
 
-app.set('port', (process.env.PORT || 5000));
 
 
 
@@ -135,6 +134,7 @@ app.post('/', greetingRoutes.generateGreetings);
 app.get('/greeted', greetingRoutes.greeted);
 app.get('/counter/:name', greetingRoutes.counter);
 
+app.set('port', (process.env.PORT || 5000));
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
