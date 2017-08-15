@@ -35,7 +35,8 @@ const assert = require('assert');
 const Models = require('../models');
 describe('models should be able to', function() {
 
-  var models = Models("mongodb://localhost/greet-app-mlabDB");
+  var models = Models("'mongodb://localhost/greet-app-mlabDB'");
+
 
   beforeEach(function(done) {
     models.greeted.remove({}, function(err) {

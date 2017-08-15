@@ -84,9 +84,12 @@ const session = require('express-session');
 
 const GreetingsRoutes = require('./greetings');
 
+const mongoURL = process.env.MONGO_DB_URL || 'mongodb://localhost/greet-app-mlabD';
+
+
 const Models = require('./models');
 
-const models = Models('mongodb://localhost/greet-app-mlabDB');
+const models = Models(mongoURL);
 
 const greetingRoutes = GreetingsRoutes(models);
 
