@@ -84,7 +84,6 @@ const session = require('express-session');
 
 const GreetingsRoutes = require('./greetings');
 
-<<<<<<< HEAD
 const mongoURL = process.env.MONGO_DB_URL || 'mongodb://localhost/greet-app-mlabD';
 
 
@@ -92,12 +91,6 @@ const Models = require('./models');
 
 const models = Models(mongoURL);
 
-=======
-const Models = require('./models');
-
-const models = Models('mongodb://localhost/greet-app-mlabDB');
-
->>>>>>> 841d9e2f124a8164b6f100f98a74528e8dc39477
 const greetingRoutes = GreetingsRoutes(models);
 
 // const port = 3400;
