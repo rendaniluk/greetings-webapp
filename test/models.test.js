@@ -19,7 +19,6 @@ describe('models should be able to', function() {
       .create(greetedNamesData, function(err) {
         done(err);
 
-
         models.greeted.find({
           name: 'greetedList'
         }, function(err, greeteds) {

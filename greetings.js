@@ -102,11 +102,11 @@ module.exports = function(models) {
     var name = {
       name: req.params.name
     };
+     const greetingCounterMsg = "Site Under Maintanance come later"
+    // const currentGreetingCounter = greetedNamesCounts[name];
 
-    const currentGreetingCounter = greetedNamesCounts[name];
-
-    const greetingCounterMsg = 'Hello, ' + name.name + ' has been greeted ' +
-      currentGreetingCounter + ' times'
+    // const greetingCounterMsg = 'Hello, ' + name.name + ' has been greeted ' +
+    //   currentGreetingCounter + ' times'
     res.render('pages/counter', {
       counterMsg: greetingCounterMsg
     })
