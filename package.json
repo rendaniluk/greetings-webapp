@@ -4,7 +4,8 @@
   "description": "This web-app is to greet individual, all you need to do is to enter your name and push enter it will return a greeting massage",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
