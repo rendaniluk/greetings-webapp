@@ -1,4 +1,3 @@
-
 <form class="form" action="/" method="post">
   <div class="myClass"><br>
     <div class="col-6">
@@ -12,11 +11,14 @@
     <input id="btnGreet" class="btn btn-success" type="submit" value="Greet">
     <br>
   </div>
-</form><br><br>
+</form>
 
 <div class="grr">
   <div class="error">
     {{messages.error}}
+  </div>
+  <div class="grr">
+    {{messages.Welcome}}
   </div>
   {{GreetMe}}
 </div>
@@ -25,5 +27,5 @@
   {{numberOfgreetings}}
 </div>
 
-<br><br>
+
 <a class="myLinks" href="/greeted">Checkout greeted names</a>

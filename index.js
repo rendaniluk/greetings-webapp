@@ -66,10 +66,10 @@ app.post('/', greetingRoutes.generateGreetings);
 app.get('/greeted', greetingRoutes.greeted);
 app.get('/counter/:name', greetingRoutes.counter);
 
-// app.set('port', (process.env.PORT || 5000));
-var port = process.env.PORT || 5000
-app.listen(port, function() {
-  console.log('Node app is running on port', port);
+app.set('port', (process.env.PORT || 5000));
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
 
 
