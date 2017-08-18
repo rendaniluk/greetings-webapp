@@ -1,6 +1,7 @@
 
 const mongoose = require('mongoose');
 module.exports = function(mongoURL) {
+  mongoose.Promise = global.Promise;
   mongoose.connect(mongoURL);
 
   const greetedSchema = mongoose.Schema({

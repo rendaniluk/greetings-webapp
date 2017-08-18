@@ -66,6 +66,9 @@ app.post('/', greetingRoutes.generateGreetings);
 app.get('/greeted', greetingRoutes.greeted);
 app.get('/counter/:name', greetingRoutes.counter);
 
+app.get('/reset', greetingRoutes.resetCounter);
+
+
 app.set('port', (process.env.PORT || 5000));
 
 app.listen(app.get('port'), function() {
