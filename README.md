@@ -4,11 +4,7 @@ This app allows you to greet people in language of your preferences and also cou
 ## All you need run  this app is to:
 * Enter name you wish to greet in the text area
 * Select language you want to use
-<<<<<<< HEAD
-* Click greet button then it will display greeting massage and the name greeted
-=======
-* Click greet button then it will display greeting massage and the name greeted 
->>>>>>> 841d9e2f124a8164b6f100f98a74528e8dc39477
+* Click greet button then it will display greeting massage and the name greeted like ## hello, Rendani 
 ## If you click greet button without following above instructions it will:
 * Display error massage.
 
