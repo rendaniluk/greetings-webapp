@@ -156,6 +156,16 @@ width:25%
 }
 
 
+.myClass .textField{
+        width: 100%;
+        clear: both;
+    }
+
+.textField input{
+  width: 40%;
+  clear: both;
+}
+
 .counter {
     width: 50%;
     height: 50px;
