@@ -1,11 +1,11 @@
-
 const mongoose = require('mongoose');
-module.exports = function(mongoURL) {
+module.exports = function(mongoUrl) {
   mongoose.Promise = global.Promise;
-  mongoose.connect(mongoURL);
+  mongoose.connect(mongoUrl);
 
   const greetedSchema = mongoose.Schema({
-    name: String
+    name: String,
+    count: Number
   });
 
   greetedSchema.index({
@@ -22,16 +22,41 @@ module.exports = function(mongoURL) {
   // console.log(greeted);
 };
 
-// const mongoose = require('mongoose');
-// module.exports = function(mongoUrl) {
-//   mongoose.connect(mongoUrl);
+
 //
-//   const greeted = mongoose.model('greeted', {
+// const mongoose = require('mongoose');
+// module.exports = function(mongoURL) {
+//   mongoose.Promise = global.Promise;
+//   mongoose.connect(mongoURL);
+//
+//   const greetedSchema = mongoose.Schema({
 //     name: String
 //   });
+//
+//   greetedSchema.index({
+//     name: 1
+//   }, {
+//     unique: true
+//   });
+//
+//   const greeted = mongoose.model('greeted', greetedSchema);
 //
 //   return {
 //     greeted
 //   };
-// console.log(greeted);
+//   // console.log(greeted);
 // };
+//
+// // const mongoose = require('mongoose');
+// // module.exports = function(mongoUrl) {
+// //   mongoose.connect(mongoUrl);
+// //
+// //   const greeted = mongoose.model('greeted', {
+// //     name: String
+// //   });
+// //
+// //   return {
+// //     greeted
+// //   };
+// // console.log(greeted);
+// // };

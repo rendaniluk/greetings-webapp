@@ -17,13 +17,11 @@ describe('models should be able to', function() {
     };
     models.greeted
       .create(greetedNamesData, function(err) {
-        done(err);
-
         models.greeted.find({
           name: 'greetedList'
         }, function(err, greeteds) {
           assert.equal(1, greeteds.length);
-          // done(err)
+          done(err)
         })
       });
   });
