@@ -14,6 +14,11 @@ module.exports = function(mongoUrl) {
     unique: true
   });
 
+  greetedSchema.index({
+    count: 1
+  }, {
+    unique: false
+  });
   const greeted = mongoose.model('greeted', greetedSchema);
 
   return {
