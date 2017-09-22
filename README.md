@@ -1,13 +1,13 @@
 # greetings-webapp
 ### Contents
-1. [About App](AboutApp)
-1. [Features and Benefits](Features)
-1. [Examples](Examples)
-1. [Installations](Installations)
-1. [Tests](Tests)
-1. [Contributing](Contributing)
-1. [Issues](Issues)
-1. [License](License)
+1. About App
+1. Features and Benefits
+1. Examples
+1. Installations
+1. Tests
+1. Contributing
+1. Issues
+1. License
 
 This app allows you to greet people in language of your preferences and also count how many times the person was greeted.
 
