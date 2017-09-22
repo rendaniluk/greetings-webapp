@@ -1,4 +1,14 @@
 # greetings-webapp
+### Contents
+##### [About App]
+##### [Features and Benefits]
+##### [Examples]
+##### [Installations]
+##### [Tests]
+##### [Contributing]
+##### [Issues]
+##### [License]
+
 This app allows you to greet people in language of your preferences and also count how many times the person was greeted.
 
 ## All you need run  this app is to:
