@@ -28,6 +28,6 @@ This app allows you to greet people in languages of your preferences and also co
 * You will see how many times the name was greeted
 * There is a button to go back to greeted list
 
-# Enjoy this app at:
+# License
 
 [greetings app](http://rendani-greetings.herokuapp.com)
