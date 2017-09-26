@@ -7,7 +7,7 @@
 1. [Tests](#Tests)
 1. [Contributing](#Contributing)
 1. [Issues](#Issues)
-1. [License](# License)
+1. [License](#_License)
 
 # About
 This app allows you to greet people in languages of your preferences and also count how many times the person was greeted.
