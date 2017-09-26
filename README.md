@@ -1,7 +1,7 @@
 # greetings-webapp
 ### Contents
-1. [About App](#About App)
-1. [Features and Benefits](#Features and Benefits)
+1. [About](#About)
+1. [Features_and_Benefits](#Features_and_Benefits)
 1. [Examples](#Examples)
 1. [Installations](#Installations)
 1. [Tests](#Tests)
