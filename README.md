@@ -9,7 +9,7 @@
 1. [Issues](#Issues)
 1. [License](#License)
 
-# About App
+# About
 This app allows you to greet people in languages of your preferences and also count how many times the person was greeted.
 
 ## All you need run  this app is to:
