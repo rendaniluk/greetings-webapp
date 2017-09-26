@@ -1,9 +1,11 @@
-<ul>
-  {{#each Greeted}}
-    <a href="/counter/{{this}}">
-      <li>{{this}}</li>
+<br><br>
+<ul class="list-group">
+
+  {{#each greeteds}}
+    <a href="/counter/{{name}}" style="text-decoration:none">
+      <li class="myList"> <input type="button" class="btn btn-info" value="{{name}}"></input></li><br>
     </a>
   {{/each}}
-  <br><br>
-  <a href="/">Greet more people</a>
+
 </ul>
+ <a class="myLinks" href="/">Greet more people</a>
