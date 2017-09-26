@@ -13,7 +13,7 @@
 This app allows you to greet people in languages of your preferences and also count how many times the person was greeted, It also count number of people greeted and store the names in mongo database.
 
 # Features and Benefits
-## For developer:
+## For developers:
 * You get to play with the locally and you can also modify the app checkout the Examples and Installations sections for more details on how you can use the app locally and modify it to your preferences.
 
 ## For  users:
