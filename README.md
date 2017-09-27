@@ -34,3 +34,6 @@ This app allows you to greet people in languages of your preferences and also co
 ##### By clicking the greeted name:
 * You will see how many times the name was greeted
 * There is a button to go back to greeted list
+
+# Examples
+Image bellow show the looks of the actual app which is avialable [here](http://rendani-greetings.herokuapp.com) .
