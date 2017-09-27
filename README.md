@@ -102,4 +102,10 @@ node_js: "v4.2.6"
 services: mongodb
 ```
 # Contributing
-* To contribute in this project you can fork ![fork](fork.png) the repository greetings-webapp 
+* To contribute in this project you can fork the repository greetings-webapp by clicking button that looks like this ![fork](fork.png) above.
+* After Fork you can clone it by typing :
+```
+$ git clone https://github.com/rendaniluk/greetings-webapp
+
+```
+in the terminal then you can work on it and push you updates to github.
