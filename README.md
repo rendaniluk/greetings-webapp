@@ -37,3 +37,7 @@ This app allows you to greet people in languages of your preferences and also co
 
 # Examples
 Image bellow show the looks of the actual app which is avialable [here](http://rendani-greetings.herokuapp.com) .
+
+# Installations
+
+# Tests [![Build Status](https://travis-ci.org/rendaniluk/greetings-webapp/builds/280324645.svg)](https://travis-ci.org/rendaniluk/greetings-webapp/builds/280324645)
