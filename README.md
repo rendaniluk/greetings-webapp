@@ -40,5 +40,6 @@ Image bellow show the looks of the actual app which is avialable [here](http://r
 ![Landing_page](landingpage.jpg)
 
 # Installations
+To run this app locally you need to clone the repo greetings-webapp [here]()
 
 # Tests [![Build Status](https://api.travis-ci.org/rendaniluk/greetings-webapp.svg)](https://travis-ci.org/rendaniluk/greetings-webapp/builds/280324645)
