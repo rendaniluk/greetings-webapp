@@ -89,7 +89,7 @@ $ node index.js
 Node app is running on port 5000
 
 ```
-* You can now open browser and type in *localhost:5000*
+* You can now open browser and type in **localhost:5000** in the url.
 
 
 # Tests [![Build Status](https://api.travis-ci.org/rendaniluk/greetings-webapp.svg)](https://travis-ci.org/rendaniluk/greetings-webapp/builds/280324645)
