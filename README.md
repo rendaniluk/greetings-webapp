@@ -41,6 +41,46 @@ Image bellow show the looks of the actual app which is avialable [here](http://r
 
 # Installations
 To run this app locally you need to clone the repo greetings-webapp [here](https://github.com/rendaniluk/greetings-webapp)
+by running the following command on terminal:
+
+```
+git clone https://github.com/rendaniluk/greetings-webapp
+cd greetings-webapp
+
+```
+Check if NodeJS and NPM is installed by running command:
+
+```node -v
+   npm -v
+```
+If it exist it will display **v4.2.6** and **3.5.2** which is the version of NodeJS and NPM respectively to the terminal, if not install by following instructions [here](https://za.godaddy.com/help/install-nodejs-ubuntu-17395) to install both NodeJS and NPM.
+
+You also need mongodb installed to check if installed run **mongo -version** in terminal it will display the version installed, if not install mongodb follow instructions [here](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-16.04/) to install.
+
+In the repository you clone there is a **package.json** file with all dependencies all you need to do is to run this command in the terminal
+
+```npm install
+```
+It will install all required dependencies, when done you can run the following command to start a local server
+
+```nodemon or node index.js
+```
+It will display the following
+```
+$ nodemon
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node index.js`
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+Node app is running on port 5000
+
+or
+
+$ node index.js
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+Node app is running on port 5000
+
+```
 
 # Tests [![Build Status](https://api.travis-ci.org/rendaniluk/greetings-webapp.svg)](https://travis-ci.org/rendaniluk/greetings-webapp/builds/280324645)
-
