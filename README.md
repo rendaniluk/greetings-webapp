@@ -40,4 +40,4 @@ Image bellow show the looks of the actual app which is avialable [here](http://r
 
 # Installations
 
-# Tests [![Build Status](https://travis-ci.org/rendaniluk/greetings-webapp/builds/280324645.svg)](https://travis-ci.org/rendaniluk/greetings-webapp/builds/280324645)
+# Tests [![Build Status](https://api.travis-ci.org/rendaniluk/greetings-webapp.svg)](https://travis-ci.org/rendaniluk/greetings-webapp/builds/280324645)
