@@ -7,7 +7,7 @@
 1. Tests
 1. Contributing
 1. Issues
-1. License
+
 
 # About App
 This app allows you to greet people in languages of your preferences and also count how many times the person was greeted, It also count number of people greeted and store the names in mongo database.
@@ -109,3 +109,6 @@ $ git clone https://github.com/rendaniluk/greetings-webapp
 
 ```
 in the terminal then you can work on it and push you updates to github.
+
+# Issues
+* There is no known Issues with the app, however feel free to let me know of any Issues you have found by sending me email to *rendani@projectcodex.co*.
