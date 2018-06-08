@@ -25,6 +25,8 @@
     "mongoose": "^4.11.5",
     "nodemon": "^1.11.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
   "keywords": []
 }
